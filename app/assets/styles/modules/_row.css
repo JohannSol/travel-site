@@ -1,44 +1,114 @@
 .row {
-   
+
     @mixin clearfix;
+
     &--gutters {
         margin-right: -65px;
     }
+
     &--gutters-large {
         margin-right: -100px;
     }
-    &--gutters > div {
-    padding-right: 65px;
+
+    &--gutters>div {
+        padding-right: 65px;
     }
-    &--gutters-large > div {
+    &--gutters-small {
+        margin-right: -45px;
+    }
+    &--gutters-small > div {
+        padding-right: 45px;
+    }
+
+    &--gutters-large>div {
         padding-right: 100px;
-    
-}
-&__b-margin-until-medium {
-    margin-bottom: 1rem;
-}
-@mixin atMedium {
+
+    }
+    &--t-padding {
+        padding-top: 80px;
+    }
+
     &__b-margin-until-medium {
+        margin-bottom: 1rem;
+    }
+    
+    @mixin atMedium {
+        &__b-margin-until-medium {
+            margin-bottom: 0;
+        }
+
+        &__medium__4 {
+            float: left;
+            width: 33.33%;
+
+            &--larger {
+                width: 37%;
+            }
+        }
+
+        &__medium-6 {
+            float: left;
+            width: 50%;
+        }
+
+        &__medium__8 {
+            float: left;
+            width: 66.66%;
+
+            &--smaller {
+                width: 63%;
+            }
+        }
+    }
+/* Begin equal height rule */
+&--equal-height-at-medium {
+    @mixin atMedium {
+        display: flex;
+    }
+    & > div {
+        float: none;
+        display: flex;
+    }
+}
+
+
+@mixin atLarge{
+    &__b-margin-until-large {
         margin-bottom: 0;
     }
-    &__medium__4 {
+
+    &__large__4 {
         float: left;
         width: 33.33%;
+
         &--larger {
             width: 37%;
         }
     }
-    &__medium-6 {
+
+    &__large-6 {
         float: left;
         width: 50%;
     }
-    &__medium__8 {
+
+    &__large__8 {
         float: left;
         width: 66.66%;
+
         &--smaller {
-            width:  63%;
+            width: 63%;
         }
     }
 }
-   
+/* Begin equal height rule */
+
+&--equal-height-at-large {
+@mixin atLarge {
+    display: flex;
+}
+& > div {
+    float: none;
+    display: flex;
+}
+}
 }

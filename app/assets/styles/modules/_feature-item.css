@@ -1,5 +1,4 @@
 .feature-item {
-   
     position: relative;
     padding-bottom: 2.5rem;
     @mixin atSmall {
@@ -12,7 +11,6 @@
             position: absolute;
             left: 0
         }
-        
     }
     &__title {
         font-size: 1.6rem;
